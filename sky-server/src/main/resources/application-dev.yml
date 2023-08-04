@@ -6,3 +6,8 @@ sky:
     database: sky_take_out
     username: root
     password: root
+  alioss:
+    endpoint: oss-cn-hangzhou.aliyuncs.com
+    access-key-id: LTAI5t6o1S7HpYg8tFYn21QA
+    access-key-secret: z7NHOv08PzCGutZdlqa2wyhQQon3fY
+    bucket-name: otaku-take-out
