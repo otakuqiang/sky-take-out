@@ -35,6 +35,15 @@
             <if test="updateTime != null">update_time = #{updateTime},</if>
             <if test="updateUser != null">update_user = #{updateUser},</if>
         </set>
-            where id = #{id}
+        where id = #{id}
     </update>
+    <select id="list" resultType="com.sky.entity.Dish" parameterType="com.sky.entity.Dish">
+        select * from dish
+        <where>
+            <if test="name != null">and name like concat('%',#{name},'%')</if>
+            <if test="categoryId != null">and category_id like concat('%',#{categoryId},'%')</if>
+            <if test="status != null">and status like concat('%',#{status},'%')</if>
+        </where>
+        order by create_time desc
+    </select>
 </mapper>
